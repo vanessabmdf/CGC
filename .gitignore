@@ -2,10 +2,14 @@
 
 CGC/nbproject/
 CGC/nbproject/private/
+nbproject/
+nbproject/private/
+
 ./CGC/private/private.xml
 ./CGC/nbproject/private/private.properties
 ./private/private.xml
 ./nbproject/private/private.properties
+
 ./CGC/nbproject/project.properties
 ./CGC/nbproject/project.xml
 ./nbproject/project.properties
