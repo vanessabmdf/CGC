@@ -1,10 +1,15 @@
 # Ignorar a pasta "private" criada pelo NetBeans e outros arquivos. #
 
+CGC/nbproject/
 CGC/nbproject/private/
 ./CGC/private/private.xml
 ./CGC/nbproject/private/private.properties
+./private/private.xml
+./nbproject/private/private.properties
 ./CGC/nbproject/project.properties
 ./CGC/nbproject/project.xml
+./nbproject/project.properties
+./nbproject/project.xml
 
 # Especificações do Eclipse #
 .classpath
