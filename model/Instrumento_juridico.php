@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/Instrumento_juridicoDAC.php';
+
 class Instrumento_juridico {
 
     private $numeroInstrumento;

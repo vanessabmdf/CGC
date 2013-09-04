@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/CircuitoDAC.php';
+
 class Circuito {
 
     private $dataAtivacao;

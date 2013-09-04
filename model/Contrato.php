@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/ContratoDAC.php';
+
 class Contrato {
 
     private $tempoEncerramentoContrato;

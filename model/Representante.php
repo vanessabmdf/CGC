@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/RepresentanteDAC.php';
+
 class Representante {
 
     private $nome;

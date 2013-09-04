@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/InstituicaoDAC.php';
+
 class Instituicao {
 
     private $sigla;

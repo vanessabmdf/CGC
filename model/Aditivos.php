@@ -1,5 +1,7 @@
 <?php
 
+include 'DAC/AditivosDAC.php';
+
 class Aditivos {
 
     private $numeroProrrogacao;
