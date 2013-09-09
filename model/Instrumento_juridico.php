@@ -10,7 +10,7 @@ class Instrumento_juridico {
     private $dataInicio;
     private $dataFim;
     private $CONTRATO_idCONTRATO;
-    private $CONTRATO_INSTITUICAO_sigla;
+    private $CONTRATO_INSTITUICAO_idINSTITUICAO;
 
     public function getNumeroInstrumento() {
         return $this->numeroInstrumento;
@@ -60,12 +60,12 @@ class Instrumento_juridico {
         $this->CONTRATO_idCONTRATO = $CONTRATO_idCONTRATO;
     }
 
-    public function getCONTRATO_INSTITUICAO_sigla() {
-        return $this->CONTRATO_INSTITUICAO_sigla;
+    public function getCONTRATO_INSTITUICAO_idINSTITUICAO() {
+        return $this->CONTRATO_INSTITUICAO_idINSTITUICAO;
     }
 
-    public function setCONTRATO_INSTITUICAO_sigla($CONTRATO_INSTITUICAO_sigla) {
-        $this->CONTRATO_INSTITUICAO_sigla = $CONTRATO_INSTITUICAO_sigla;
+    public function setCONTRATO_INSTITUICAO_idINSTITUICAO($CONTRATO_INSTITUICAO_idINSTITUICAO) {
+        $this->CONTRATO_INSTITUICAO_idINSTITUICAO = $CONTRATO_INSTITUICAO_idINSTITUICAO;
     }
 
     function __construct() {

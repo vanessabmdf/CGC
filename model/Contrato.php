@@ -8,7 +8,7 @@ class Contrato {
     private $duracao;
     private $dataFim;
     private $dataInicio;
-    private $INSTITUICAO_sigla;
+    private $INSTITUICAO_idINSTITUICAO;
 
     public function getTempoEncerramentoContrato() {
         return $this->tempoEncerramentoContrato;
@@ -42,12 +42,12 @@ class Contrato {
         $this->dataInicio = $dataInicio;
     }
 
-    public function getINSTITUICAO_sigla() {
-        return $this->INSTITUICAO_sigla;
+    public function getINSTITUICAO_idINSTITUICAO() {
+        return $this->INSTITUICAO_idINSTITUICAO;
     }
 
-    public function setINSTITUICAO_sigla($INSTITUICAO_sigla) {
-        $this->INSTITUICAO_sigla = $INSTITUICAO_sigla;
+    public function setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO) {
+        $this->INSTITUICAO_idINSTITUICAO = $INSTITUICAO_idINSTITUICAO;
     }
 
     function __construct() {
