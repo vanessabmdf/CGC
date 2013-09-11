@@ -17,7 +17,8 @@ include '../model/Instituicao.php';
             <div class="navbar">
                 <div class="navbar-inner">
                     <ul class="nav">
-                        <li class="active"><a href="index.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li class="active"><a href="relatorio.php">Relat&oacute;rio</a></li>
                         <li><a href="#">Sobre</a></li>
                     </ul>
                 </div>
