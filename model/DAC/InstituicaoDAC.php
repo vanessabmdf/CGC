@@ -3,18 +3,18 @@
 class InstituicaoDAC {
 
     public static function persist($instituicao) {
-        include_once './conexao.php';
+        include_once 'conexao.php';
         $sql = "INSERT INTO `instituicao` (`sigla`, `nome`, `cnpj`, `endereco`, 
             `cidade`, `estado`, `bairro`, `cep`, `valorContratoOriginal`) VALUES 
-            ('" . $instituicao->getSigla . "',
-                '" . $instituicao->getNome . "',
-                '" . $instituicao->getCnpj . "',
-                '" . $instituicao->getEnderco . "',
-                '" . $instituicao->getCidade . "',
-                '" . $instituicao->getEstado . "',
-                '" . $instituicao->getBairro . "',
-                '" . $instituicao->getCep . "',
-                '" . $instituicao->getValorContratoOtiginal . "');";
+            ('" . $instituicao->getSigla() . "',
+                '" . $instituicao->getNome() . "',
+                '" . $instituicao->getCnpj() . "',
+                '" . $instituicao->getEndereco() . "',
+                '" . $instituicao->getCidade() . "',
+                '" . $instituicao->getEstado() . "',
+                '" . $instituicao->getBairro() . "',
+                '" . $instituicao->getCep() . "',
+                '" . $instituicao->getValorContratoOriginal() . "');";
 
         mysql_query($sql) or die(mysql_error() . "instituicaoDAC - Persist");
 

@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="control-group"><label class="control-label" for="nome">Estado</label>
-                <div class="controls"><select name="estados">
+                <div class="controls"><select name="estado">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AM">Amazonas</option>

@@ -4,7 +4,7 @@ include '../model/Instituicao.php';
 
 $sigla = addslashes($_POST['sigla']);
 $nome = addslashes($_POST['nome']);
-$cnpj = addslashes($_POST['cnpf']);
+$cnpj = addslashes($_POST['cnpj']);
 $endereco = addslashes($_POST['endereco']);
 $cidade = addslashes($_POST['cidade']);
 $estado = addslashes($_POST['estado']);

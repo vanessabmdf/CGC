@@ -99,6 +99,10 @@ class Instituicao {
         
     }
 
+    public function persist() {
+        return InstituicaoDAC::persist($this);
+    }
+
 }
 
 ?>
