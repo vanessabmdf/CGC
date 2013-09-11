@@ -79,7 +79,7 @@
             <div class="control-group">
                 <label class="control-label" for="nome">Valor do Contrato Original</label>
                 <div class="controls">
-                    <input type="text" name="valorContratoOriginal" placeholder="Valor Original" required>
+                    <input type="number" name="valorContratoOriginal">
                 </div>
             </div>
             <div class="control-group">
