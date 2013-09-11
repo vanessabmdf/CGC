@@ -103,6 +103,10 @@ class Instituicao {
         return InstituicaoDAC::persist($this);
     }
 
+    public function recupereTudo() {
+        return InstituicaoDAC::recupereTudo();
+    }
+
 }
 
 ?>

@@ -58,6 +58,19 @@ class InstituicaoDAC {
         }
     }
 
+    public static function recupereTudo() {
+
+        //selecionando dados da tabela
+        include_once 'conexao.php';
+        $sql = "SELECT * FROM instituicao";
+        $query = mysql_query($sql);
+        while ($sql = mysql_fetch_array($query)) {
+            $id = $sql["id"];
+            $nome = $sql["nome"];
+            echo "<a href=nome.php?id=$id>$nome</a>";
+        }
+    }
+
 }
 
 ?>
