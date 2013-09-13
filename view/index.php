@@ -15,7 +15,7 @@
         while ($sql = mysql_fetch_array($query)) {
             $id = $sql["idINSTITUICAO"];
             $nome = $sql["nome"];
-            echo "$nome ID = $id <a href=editarInstituicao.php>Editar</a>";
+            echo "$nome (ID = $id) <a href=editarInstituicao.php>Editar</a>";
             echo "</br>";
         }
         ?>
