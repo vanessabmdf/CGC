@@ -9,6 +9,7 @@ class Endereco {
     private $cidade;
     private $estado;
     private $cep;
+    private $INSTITUICAO_idINSTITUICAO;
 
     public function getEndereco() {
         return $this->endereco;
@@ -48,6 +49,14 @@ class Endereco {
 
     public function setCep($cep) {
         $this->cep = $cep;
+    }
+
+    public function getINSTITUICAO_idINSTITUICAO() {
+        return $this->INSTITUICAO_idINSTITUICAO;
+    }
+
+    public function setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO) {
+        $this->INSTITUICAO_idINSTITUICAO = $INSTITUICAO_idINSTITUICAO;
     }
 
     function __construct() {
