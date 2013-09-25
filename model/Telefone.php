@@ -23,6 +23,10 @@ class Telefone {
         $this->telefoneMovel = $telefoneMovel;
     }
 
+    function __construct() {
+        
+    }
+
 }
 ?>
 

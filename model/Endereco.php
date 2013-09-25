@@ -50,6 +50,10 @@ class Endereco {
         $this->cep = $cep;
     }
 
+    function __construct() {
+        
+    }
+
 }
 
 ?>
