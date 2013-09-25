@@ -4,22 +4,10 @@ include 'DAC/RepresentanteDAC.php';
 
 class Representante {
 
-    private $nome;
     private $cargo;
     private $departamento;
-    private $telefoneFixo;
-    private $telefoneCelular;
-    private $email;
-    private $tipo;
-    private $INSTITUICAO_idINSTITUICAO;
-
-    public function getNome() {
-        return $this->nome;
-    }
-
-    public function setNome($nome) {
-        $this->nome = $nome;
-    }
+    private $PESSOA_idPESSOA;
+    private $PESSOA_INSTITUICAO_idINSTITUICAO;
 
     public function getCargo() {
         return $this->cargo;
@@ -37,44 +25,20 @@ class Representante {
         $this->departamento = $departamento;
     }
 
-    public function getTelefoneFixo() {
-        return $this->telefoneFixo;
+    public function getPESSOA_idPESSOA() {
+        return $this->PESSOA_idPESSOA;
     }
 
-    public function setTelefoneFixo($telefoneFixo) {
-        $this->telefoneFixo = $telefoneFixo;
+    public function setPESSOA_idPESSOA($PESSOA_idPESSOA) {
+        $this->PESSOA_idPESSOA = $PESSOA_idPESSOA;
     }
 
-    public function getTelefoneCelular() {
-        return $this->telefoneCelular;
+    public function getPESSOA_INSTITUICAO_idINSTITUICAO() {
+        return $this->PESSOA_INSTITUICAO_idINSTITUICAO;
     }
 
-    public function setTelefoneCelular($telefoneCelular) {
-        $this->telefoneCelular = $telefoneCelular;
-    }
-
-    public function getEmail() {
-        return $this->email;
-    }
-
-    public function setEmail($email) {
-        $this->email = $email;
-    }
-
-    public function getTipo() {
-        return $this->tipo;
-    }
-
-    public function setTipo($tipo) {
-        $this->tipo = $tipo;
-    }
-
-    public function getINSTITUICAO_idINSTITUICAO() {
-        return $this->INSTITUICAO_idINSTITUICAO;
-    }
-
-    public function setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO) {
-        $this->INSTITUICAO_idINSTITUICAO = $INSTITUICAO_idINSTITUICAO;
+    public function setPESSOA_INSTITUICAO_idINSTITUICAO($PESSOA_INSTITUICAO_idINSTITUICAO) {
+        $this->PESSOA_INSTITUICAO_idINSTITUICAO = $PESSOA_INSTITUICAO_idINSTITUICAO;
     }
 
     function __construct() {
