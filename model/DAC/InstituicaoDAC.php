@@ -4,19 +4,12 @@ class InstituicaoDAC {
 
     public static function persist($instituicao) {
         include_once 'conexao.php';
-        $sql = "INSERT INTO `instituicao` (`sigla`, `nome`, `cnpj`, `endereco`, 
-            `cidade`, `estado`, `bairro`, `cep`, `valorContratoOriginal`) VALUES 
+        $sql = "INSERT INTO `instituicao` (`sigla`, `nome`, `cnpj` ) VALUES 
             ('" . $instituicao->getSigla() . "',
                 '" . $instituicao->getNome() . "',
-                '" . $instituicao->getCnpj() . "',
-                '" . $instituicao->getEndereco() . "',
-                '" . $instituicao->getCidade() . "',
-                '" . $instituicao->getEstado() . "',
-                '" . $instituicao->getBairro() . "',
-                '" . $instituicao->getCep() . "',
-                '" . $instituicao->getValorContratoOriginal() . "');";
+                '" . $instituicao->getCnpj() . "');";
 
-        mysql_query($sql) or die(mysql_error() . "instituicaoDAC - Persist");
+        mysql_query($sql) or die(mysql_error() . "InstituicaoDAC - Persist");
 
         $RES = mysql_query("SELECT LAST_INSERT_ID()");
         $mat = mysql_fetch_array($RES);
@@ -46,12 +39,6 @@ class InstituicaoDAC {
             $instituicao->setSigla($row['sigla']);
             $instituicao->setNome($row['nome']);
             $instituicao->setCnpj($row['cnpj']);
-            $instituicao->setEnderco($row['endereco']);
-            $instituicao->setCidade($row['cidade']);
-            $instituicao->setEstado($row['estado']);
-            $instituicao->setBairro($row['bairro']);
-            $instituicao->setCep($row['cep']);
-            $instituicao->setValorContratoOriginal($row['valorContratoOriginal']);
             return 1;
         } else {
             return NULL;

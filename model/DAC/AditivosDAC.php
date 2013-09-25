@@ -5,11 +5,15 @@ class AditivosDAC {
     public static function persist($aditivos) {
         include_once './conexao.php';
         $sql = "INSERT INTO `aditivos` (`numeroProrrogacao`, `dataInicio`, 
-            `dataFim`) VALUES ('" . $aditivos->getNumeroProrrogacao() . "', 
+            `dataFim`, `INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO`, 
+            `INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO` ) VALUES 
+            ('" . $aditivos->getNumeroProrrogacao() . "', 
                 '" . $aditivos->getDataInicio() . "',
-                '" . $aditivos->getDataFim() . "');";
+                '" . $aditivos->getDataFim() . "',
+                '" . $aditivos->getINSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO() . "',
+                '" . $aditivos->getINSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO() . "');";
 
-        mysql_query($sql) or die(mysql_error() . "adtivosDAC - Persist");
+        mysql_query($sql) or die(mysql_error() . "AdtivosDAC - Persist");
 
         $RES = mysql_query("SELECT LAST_INSERT_ID()");
         $mat = mysql_fetch_array($RES);
@@ -46,4 +50,5 @@ class AditivosDAC {
     }
 
 }
+
 ?>

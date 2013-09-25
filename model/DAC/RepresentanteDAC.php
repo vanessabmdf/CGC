@@ -4,17 +4,14 @@ class RepresentanteDAC {
 
     public static function persist($representante) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `representante` (`nome`, `cargo`, `departamento`, 
-            `telefoneFixo`, `telefoneCelular`, `email`, `tipo`) VALUES 
-            ('" . $representante->getNome . "',
-                '" . $representante->getCargo . "',
-                '" . $representante->getDepartamento . "',
-                '" . $representante->getTelefoneFixo . "',
-                '" . $representante->getTelefoneCelular . "',
-                '" . $representante->getEmail . "',
-                '" . $representante->getTipo . "');";
+        $sql = "INSERT INTO `representante` (`cargo`, `departamento`, 
+            `PESSOA_idPESSOA`, `PESSOA_INSTITUICAO_idINSTITUICAO` ) VALUES 
+            ('" . $representante->getCargo() . "',
+                '" . $representante->getDepartamento() . "',
+                '" . $representante->getPESSOA_idPESSOA() . "',
+                '" . $representante->getPESSOA_INSTITUICAO_idINSTITUICAO() . "');";
 
-        mysql_query($sql) or die(mysql_error() . "representanteDAC - Persist");
+        mysql_query($sql) or die(mysql_error() . "RepresentanteDAC - Persist");
 
         $RES = mysql_query("SELECT LAST_INSERT_ID()");
         $mat = mysql_fetch_array($RES);
@@ -22,7 +19,7 @@ class RepresentanteDAC {
         return $mat['0'];
     }
 
-    public static function updateInfo(Instituicao $representante, $atributo, $atributoNovo) {
+    public static function updateInfo(Representante $representante, $atributo, $atributoNovo) {
         include_once 'conexao.php';
         $sql = "UPDATE `representante` SET `$atributo`=$atributoNovo WHERE id=" . $representante->getId();
         mysql_query($sql) or die(mysql_error());
@@ -41,13 +38,8 @@ class RepresentanteDAC {
         $row = mysql_fetch_array($resultado);
 
         if (mysql_num_rows($resultado) == 1) {
-            $representante->setNome($row['nome']);
             $representante->setCargo($row['cargo']);
             $representante->setDepartamento($row['departamento']);
-            $representante->setTelefoneFixo($row['telefoneFixo']);
-            $representante->setTelefoneCelular($row['telefoneCelular']);
-            $representante->setEmail($row['email']);
-            $representante->setTipo($row['tipo']);
             return 1;
         } else {
             return NULL;
