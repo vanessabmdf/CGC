@@ -4,21 +4,14 @@ include 'DAC/Instrumento_juridicoDAC.php';
 
 class Instrumento_juridico {
 
-    private $numeroInstrumento;
     private $nome;
-    private $valor;
     private $dataInicio;
     private $dataFim;
-    private $CONTRATO_idCONTRATO;
-    private $CONTRATO_INSTITUICAO_idINSTITUICAO;
-
-    public function getNumeroInstrumento() {
-        return $this->numeroInstrumento;
-    }
-
-    public function setNumeroInstrumento($numeroInstrumento) {
-        $this->numeroInstrumento = $numeroInstrumento;
-    }
+    private $valorContratoOriginal;
+    private $informacoes;
+    private $INSTITUICAO_idINSTITUICAO;
+    private $TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO;
+    private $INSTITUICAO_CONTRATADA_idINSTITUICAO;
 
     public function getNome() {
         return $this->nome;
@@ -26,14 +19,6 @@ class Instrumento_juridico {
 
     public function setNome($nome) {
         $this->nome = $nome;
-    }
-
-    public function getValor() {
-        return $this->valor;
-    }
-
-    public function setValor($valor) {
-        $this->valor = $valor;
     }
 
     public function getDataInicio() {
@@ -52,20 +37,44 @@ class Instrumento_juridico {
         $this->dataFim = $dataFim;
     }
 
-    public function getCONTRATO_idCONTRATO() {
-        return $this->CONTRATO_idCONTRATO;
+    public function getValorContratoOriginal() {
+        return $this->valorContratoOriginal;
     }
 
-    public function setCONTRATO_idCONTRATO($CONTRATO_idCONTRATO) {
-        $this->CONTRATO_idCONTRATO = $CONTRATO_idCONTRATO;
+    public function setValorContratoOriginal($valorContratoOriginal) {
+        $this->valorContratoOriginal = $valorContratoOriginal;
     }
 
-    public function getCONTRATO_INSTITUICAO_idINSTITUICAO() {
-        return $this->CONTRATO_INSTITUICAO_idINSTITUICAO;
+    public function getInformacoes() {
+        return $this->informacoes;
     }
 
-    public function setCONTRATO_INSTITUICAO_idINSTITUICAO($CONTRATO_INSTITUICAO_idINSTITUICAO) {
-        $this->CONTRATO_INSTITUICAO_idINSTITUICAO = $CONTRATO_INSTITUICAO_idINSTITUICAO;
+    public function setInformacoes($informacoes) {
+        $this->informacoes = $informacoes;
+    }
+
+    public function getINSTITUICAO_idINSTITUICAO() {
+        return $this->INSTITUICAO_idINSTITUICAO;
+    }
+
+    public function setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO) {
+        $this->INSTITUICAO_idINSTITUICAO = $INSTITUICAO_idINSTITUICAO;
+    }
+
+    public function getTIPO_INSTRUMENTO_idTIPO_INSTRUMENTO() {
+        return $this->TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO;
+    }
+
+    public function setTIPO_INSTRUMENTO_idTIPO_INSTRUMENTO($TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO) {
+        $this->TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO = $TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO;
+    }
+
+    public function getINSTITUICAO_CONTRATADA_idINSTITUICAO() {
+        return $this->INSTITUICAO_CONTRATADA_idINSTITUICAO;
+    }
+
+    public function setINSTITUICAO_CONTRATADA_idINSTITUICAO($INSTITUICAO_CONTRATADA_idINSTITUICAO) {
+        $this->INSTITUICAO_CONTRATADA_idINSTITUICAO = $INSTITUICAO_CONTRATADA_idINSTITUICAO;
     }
 
     function __construct() {

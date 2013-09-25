@@ -7,9 +7,8 @@ class Aditivos {
     private $numeroProrrogacao;
     private $dataInicio;
     private $dataFim;
-    private $tempoEncerramentoProrrogacao;
-    private $CONTRATO_idCONTRATO;
-    private $CONTRATO_INSTITUICAO_idINSTITUICAO;
+    private $INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO;
+    private $INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO;
 
     public function getNumeroProrrogacao() {
         return $this->numeroProrrogacao;
@@ -35,28 +34,20 @@ class Aditivos {
         $this->dataFim = $dataFim;
     }
 
-    public function getTempoEncerramentoProrrogacao() {
-        return $this->tempoEncerramentoProrrogacao;
+    public function getINSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO() {
+        return $this->INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO;
     }
 
-    public function setTempoEncerramentoProrrogacao($tempoEncerramentoProrrogacao) {
-        $this->tempoEncerramentoProrrogacao = $tempoEncerramentoProrrogacao;
+    public function setINSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO($INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO) {
+        $this->INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO = $INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO;
     }
 
-    public function getCONTRATO_idCONTRATO() {
-        return $this->CONTRATO_idCONTRATO;
+    public function getINSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO() {
+        return $this->INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO;
     }
 
-    public function setCONTRATO_idCONTRATO($CONTRATO_idCONTRATO) {
-        $this->CONTRATO_idCONTRATO = $CONTRATO_idCONTRATO;
-    }
-
-    public function getCONTRATO_INSTITUICAO_idINSTITUICAO() {
-        return $this->CONTRATO_INSTITUICAO_idINSTITUICAO;
-    }
-
-    public function setCONTRATO_INSTITUICAO_idINSTITUICAO($CONTRATO_INSTITUICAO_idINSTITUICAO) {
-        $this->CONTRATO_INSTITUICAO_idINSTITUICAO = $CONTRATO_INSTITUICAO_idINSTITUICAO;
+    public function setINSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO($INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO) {
+        $this->INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO = $INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO;
     }
 
     function __construct() {
