@@ -151,8 +151,8 @@ ENGINE = InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 -- -----------------------------------------------------
 -- Table `TELEFONES`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `TELEFONES` (
-  `idTELEFONES` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `TELEFONE` (
+  `idTELEFONE` INT NOT NULL AUTO_INCREMENT,
   `telefoneFixo` VARCHAR(45) NULL,
   `telefoneMovel` VARCHAR(45) NULL,
   `PESSOA_idPESSOA` INT NOT NULL,
