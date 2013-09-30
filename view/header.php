@@ -13,10 +13,13 @@ include '../model/Instituicao.php';
             var isRTL = false;
         </script>
 
-        <base href="http://gigacandanga.com.br/index.php/informes" />
+        <base href="http://gigacandanga.com.br/"/>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="generator" content="Joomla! - Open Source Content Management" />
-        <title>Gestão</title>
+        <title>Gestão</title>        
+        <link href="view/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="view/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" />
+        <link href="view/css/style.css" rel="stylesheet" media="screen" />
         <link href="/index.php/informes?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
         <link href="/index.php/informes?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
         <link rel="stylesheet" href="/t3-assets/css_3c489.css" type="text/css" />
