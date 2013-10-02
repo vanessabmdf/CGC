@@ -45,6 +45,14 @@ class Representante {
         
     }
 
+    public function persist() {
+        return RepresentanteDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return RepresentanteDAC::recupereTudo();
+    }
+
 }
 
 ?>
