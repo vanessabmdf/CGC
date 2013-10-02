@@ -81,6 +81,14 @@ class Instrumento_juridico {
         
     }
 
+    public function persist() {
+        return Instrumento_juridicoDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return Instrumento_juridicoDAC::recupereTudo();
+    }
+
 }
 
 ?>
