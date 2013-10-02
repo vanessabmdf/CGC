@@ -63,6 +63,14 @@ class Endereco {
         
     }
 
+    public function persist() {
+        return EnderecoDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return EnderecoDAC::recupereTudo();
+    }
+
 }
 
 ?>
