@@ -45,6 +45,14 @@ class Telefone {
         
     }
 
+    public function persist() {
+        return TelefoneDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return TelefoneDAC::recupereTudo();
+    }
+
 }
 ?>
 
