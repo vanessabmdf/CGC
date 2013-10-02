@@ -54,6 +54,14 @@ class Aditivos {
         
     }
 
+    public function persist() {
+        return AditivosDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return AditivosDAC::recupereTudo();
+    }
+
 }
 
 ?>
