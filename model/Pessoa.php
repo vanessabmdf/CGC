@@ -45,6 +45,14 @@ class Pessoa {
         
     }
 
+    public function persist() {
+        return PessoaDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return PessoaDAC::recupereTudo();
+    }
+
 }
 
 ?>
