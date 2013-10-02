@@ -45,6 +45,14 @@ class Conexao {
         
     }
 
+    public function persist() {
+        return ConexaoDAC::persist($this);
+    }
+
+    public function recupereTudo() {
+        return ConexaoDAC::recupereTudo();
+    }
+
 }
 
 ?>
