@@ -1,8 +1,8 @@
 <?php
 
-include 'DAC/ConexaoDAC.php';
+include 'DAC/CircuitoDAC.php';
 
-class Conexao {
+class Circuito {
 
     private $nome;
     private $dataAtivacao;
@@ -46,11 +46,11 @@ class Conexao {
     }
 
     public function persist() {
-        return ConexaoDAC::persist($this);
+        return CircuitoDAC::persist($this);
     }
 
     public function recupereTudo() {
-        return ConexaoDAC::recupereTudo();
+        return CircuitoDAC::recupereTudo();
     }
 
 }

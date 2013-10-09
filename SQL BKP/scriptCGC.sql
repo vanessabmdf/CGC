@@ -48,9 +48,9 @@ ENGINE = InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1
 COMMENT = ' ';
 
 -- -----------------------------------------------------
--- Table `CONEXAO`
+-- Table `CIRCUITO`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CONEXAO` (
+CREATE TABLE IF NOT EXISTS `CIRCUITO` (
   `idCIRCUITO` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(240) NULL,
   `dataAtivacao` DATE NULL,

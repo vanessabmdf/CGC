@@ -1,6 +1,6 @@
 <?php
 
-include '../model/Conexao.php';
+include '../model/Circuito.php';
 
 $nome = addslashes($_POST['nome']);
 $dataAtivacao = addslashes($_POST['dataAtivacao']);
@@ -13,13 +13,13 @@ addcslashes($dataAtivacao, $strList);
 addcslashes($dataDesativacao, $strList);
 addcslashes($INSTITUICAO_idINSTITUICAO, $strList);
 
-$conexao = new Conexao();
+$circuito = new Circuito();
 
-$conexao->setNome($nome);
-$conexao->setDataAtivacao($dataAtivacao);
-$conexao->setDataDesativacao($dataDesativacao);
-$conexao->setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO);
+$circuito->setNome($nome);
+$circuito->setDataAtivacao($dataAtivacao);
+$circuito->setDataDesativacao($dataDesativacao);
+$circuito->setINSTITUICAO_idINSTITUICAO($INSTITUICAO_idINSTITUICAO);
 
-$conexao->persist();
+$circuito->persist();
 echo "efetuado com sucesso";
 ?>

@@ -1,17 +1,17 @@
 <?php
 
-class ConexaoDAC {
+class CircuitoDAC {
 
     public static function persist($circuito) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `conexao` (`nome`, `dataAtivacao`, 
+        $sql = "INSERT INTO `circuito` (`nome`, `dataAtivacao`, 
             `dataDesativacao`, `INSTITUICAO_idINSTITUICAO` ) VALUES 
             ('" . $circuito->getNome() . "', 
                 '" . $circuito->getDataAtivacao() . "',
                 '" . $circuito->getDataDesativacao() . "',
                 '" . $circuito->getINSTITUICAO_idINSTITUICAO() . "');";
 
-        mysql_query($sql) or die(mysql_error() . "ConexaoDAC - Persist");
+        mysql_query($sql) or die(mysql_error() . "CircuitoDAC - Persist");
 
         $RES = mysql_query("SELECT LAST_INSERT_ID()");
         $mat = mysql_fetch_array($RES);
@@ -21,19 +21,19 @@ class ConexaoDAC {
 
     public static function updateInfo(Circuito $circuito, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `conexao` SET `$atributo`=$atributoNovo WHERE id=" . $circuito->getId();
+        $sql = "UPDATE `circuito` SET `$atributo`=$atributoNovo WHERE id=" . $circuito->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($circuito) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `conexao` WHERE id=";
+        $sql = "DELETE FROM `circuito` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($circuito, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM `conexao` WHERE id=$id";
+        $sql = "SELECT * FROM `circuito` WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 
