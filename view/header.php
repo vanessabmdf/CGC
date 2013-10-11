@@ -194,27 +194,26 @@ include '../model/Instituicao.php';
                                 <li class="mega haschild"><a href="http://gigacandanga.net.br/gestao/" class="mega haschild" id="menu472" title="Gestão"><span class="menu-title">Gestão</span></a><div class="childcontent cols1 " style="width: 220px; height: 298px; display: none; margin-left: 0px; left: 98px; z-index: 1000;">
                                         <div class="childcontent-inner-wrap" style="width: 200px;">
                                             <div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first"><a href="gestao/cadastraInstituicao.php" class="mega first" id="" title="Cadastrar Instituição"><span class="menu-title">Cadastrar Instituição</span></a></li><li class="mega"><a href="gestao/relatorio" class="mega" id="" title="Relatório"><span class="menu-title">Relatório</span></a></li>
-                                        </div></div></li>
-                                <li  class="mega last active"><a href="http://gigacandanga.net.br/gestao/"  class="mega last active" id="menu553" title="Gestão"><span class="menu-title">Gestão</span></a></li></ul>
-                        </div>            <script type="text/javascript">
-            var megamenu = new jaMegaMenuMoo('ja-megamenu', {
-                'bgopacity': 0,
-                'delayHide': 300,
-                'slide': 0,
-                'fading': 0,
-                'direction': 'down',
-                'action': 'mouseover',
-                'tips': false,
-                'duration': 300,
-                'hidestyle': 'fastwhenshow'
-            });
-                        </script>
-                        <!-- jdoc:include type="menu" level="0" / -->
+                                                </div></div></li>
+                                        </div>            <script type="text/javascript">
+                            var megamenu = new jaMegaMenuMoo('ja-megamenu', {
+                                'bgopacity': 0,
+                                'delayHide': 300,
+                                'slide': 0,
+                                'fading': 0,
+                                'direction': 'down',
+                                'action': 'mouseover',
+                                'tips': false,
+                                'duration': 300,
+                                'hidestyle': 'fastwhenshow'
+                            });
+                                        </script>
+                                        <!-- jdoc:include type="menu" level="0" / -->
 
 
 
-                        <ul class="no-display">
-                            <li><a href="#ja-content" title="Skip to content">Skip to content</a></li>
-                        </ul>                </div>
-                </div>
-            </div>
+                                        <ul class="no-display">
+                                            <li><a href="#ja-content" title="Skip to content">Skip to content</a></li>
+                                        </ul>                </div>
+                                    </div>
+                                    </div>
