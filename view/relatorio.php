@@ -1,4 +1,4 @@
-<?php require_once('./header_relatorio.php'); ?>
+<?php require_once('header.php'); ?>
 
 <section class="container">
     <div class="row">
