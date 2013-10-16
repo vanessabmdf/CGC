@@ -34,7 +34,7 @@
                                                 //require_once('../controller/processaGestao.php') 
                                                 //selecionando dados da tabela
                                                 include_once 'model/DAC/conexao.php';
-                                                $sql = "SELECT * FROM instituicao";
+                                                $sql = "SELECT * FROM INSTITUICAO";
                                                 $query = mysql_query($sql);
                                                 while ($sql = mysql_fetch_array($query)) {
                                                     $id = $sql["idINSTITUICAO"];
