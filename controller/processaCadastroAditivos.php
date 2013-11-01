@@ -24,5 +24,7 @@ $aditivos->setINSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO($INSTRUMENTO_JURIDICO_
 $aditivos->setINSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO($INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO);
 
 $aditivos->persist();
-echo "efetuado com sucesso";
+echo "Cadastro efetuado com sucesso!";
+echo "</br>";
+echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>"
 ?>

@@ -18,5 +18,7 @@ $instituicao->setNome($nome);
 $instituicao->setCnpj($cnpj);
 
 $instituicao->persist();
-echo "efetuado com sucesso";
+echo "Cadastro efetuado com sucesso!";
+echo "</br>";
+echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>"
 ?>

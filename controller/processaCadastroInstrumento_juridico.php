@@ -33,5 +33,7 @@ $instrumento_juridico->setTIPO_INSTRUMENTO_idTIPO_INSTRUMENTO($TIPO_INSTRUMENTO_
 $instrumento_juridico->setINSTITUICAO_CONTRATADA_idINSTITUICAO($INSTITUICAO_CONTRATADA_idINSTITUICAO);
 
 $instrumento_juridico->persist();
-echo "efetuado com sucesso";
+echo "Cadastro efetuado com sucesso!";
+echo "</br>";
+echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>"
 ?>

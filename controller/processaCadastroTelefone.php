@@ -21,5 +21,7 @@ $telefone->setPESSOA_idPESSOA($PESSOA_idPESSOA);
 $telefone->setPESSOA_INSTITUICAO_idINSTITUICAO($PESSOA_INSTITUICAO_idINSTITUICAO);
 
 $telefone->persist();
-echo "efetuado com sucesso";
+echo "Cadastro efetuado com sucesso!";
+echo "</br>";
+echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>"
 ?>
