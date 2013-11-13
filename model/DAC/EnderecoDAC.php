@@ -4,7 +4,7 @@ class EnderecoDAC {
 
     public static function persist($endereco) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `endereco` (`endereco`, `bairro`, `cidade`, 
+        $sql = "INSERT INTO `ENDERECO` (`endereco`, `bairro`, `cidade`, 
             `estado`, `cep`, `INSTITUICAO_idINSTITUICAO` ) VALUES 
             ('" . $endereco->getEndereco() . "', 
                 '" . $endereco->getBairro() . "',
@@ -23,19 +23,19 @@ class EnderecoDAC {
 
     public static function updateInfo(Endereco $endereco, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `endereco` SET `$atributo`=$atributoNovo WHERE id=" . $endereco->getId();
+        $sql = "UPDATE `ENDERECO` SET `$atributo`=$atributoNovo WHERE id=" . $endereco->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($endereco) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `endereco` WHERE id=";
+        $sql = "DELETE FROM `ENDERECO` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($endereco, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM `endereco` WHERE id=$id";
+        $sql = "SELECT * FROM `ENDERECO` WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 

@@ -4,7 +4,7 @@ class AditivosDAC {
 
     public static function persist($aditivos) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `aditivos` (`numeroProrrogacao`, `dataInicio`, 
+        $sql = "INSERT INTO `ADITIVOS` (`numeroProrrogacao`, `dataInicio`, 
             `dataFim`, `INSTRUMENTO_JURIDICO_idINSTRUMENTO_JURIDICO`, 
             `INSTRUMENTO_JURIDICO_INSTITUICAO_idINSTITUICAO` ) VALUES 
             ('" . $aditivos->getNumeroProrrogacao() . "', 
@@ -23,19 +23,19 @@ class AditivosDAC {
 
     public static function updateInfo(Aditivos $aditivos, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `aditivos` SET `$atributo`=$atributoNovo WHERE id=" . $aditivos->getId();
+        $sql = "UPDATE `ADITIVOS` SET `$atributo`=$atributoNovo WHERE id=" . $aditivos->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($aditivos) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `aditivos` WHERE id=";
+        $sql = "DELETE FROM `ADITIVOS` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($aditivos, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM aditivos WHERE id=$id";
+        $sql = "SELECT * FROM ADITIVOS WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 

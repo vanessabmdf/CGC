@@ -4,7 +4,7 @@ class InstituicaoDAC {
 
     public static function persist($instituicao) {
         include_once 'conexao.php';
-        $sql = "INSERT INTO `instituicao` (`sigla`, `nome`, `cnpj` ) VALUES 
+        $sql = "INSERT INTO `INSTITUICAO` (`sigla`, `nome`, `cnpj` ) VALUES 
             ('" . $instituicao->getSigla() . "',
                 '" . $instituicao->getNome() . "',
                 '" . $instituicao->getCnpj() . "');";
@@ -19,19 +19,19 @@ class InstituicaoDAC {
 
     public static function updateInfo(Instituicao $instituicao, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `instituicao` SET `$atributo`=$atributoNovo WHERE id=" . $instituicao->getIdInstituicao();
+        $sql = "UPDATE `INSTITUICAO` SET `$atributo`=$atributoNovo WHERE id=" . $instituicao->getIdInstituicao();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($instituicao) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `instituicao` WHERE id=";
+        $sql = "DELETE FROM `INSTITUICAO` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($instituicao, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM instituicao WHERE id=$id";
+        $sql = "SELECT * FROM INSTITUICAO WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 
@@ -49,7 +49,7 @@ class InstituicaoDAC {
 
         //selecionando dados da tabela
         include_once 'conexao.php';
-        $sql = "SELECT * FROM instituicao";
+        $sql = "SELECT * FROM INSTITUICAO";
         $query = mysql_query($sql);
         while ($sql = mysql_fetch_array($query)) {
             $id = $sql["id"];

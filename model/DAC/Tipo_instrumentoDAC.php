@@ -4,7 +4,7 @@ class Tipo_instrumentoDAC {
 
     public static function persist($tipo_instrumento) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `tipo_instrumento` (`tipo`) VALUES 
+        $sql = "INSERT INTO `TIPO_INSTRUMENTO` (`tipo`) VALUES 
             ('" . $tipo_instrumento->getTipo() . "');";
 
         mysql_query($sql) or die(mysql_error() . "Tipo_instrumentoDAC - Persist");
@@ -17,19 +17,19 @@ class Tipo_instrumentoDAC {
 
     public static function updateInfo(Tipo_instrumento $tipo_instrumento, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `tipo_instrumento` SET `$atributo`=$atributoNovo WHERE id=" . $tipo_instrumento->getId();
+        $sql = "UPDATE `TIPO_INSTRUMENTO` SET `$atributo`=$atributoNovo WHERE id=" . $tipo_instrumento->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($tipo_instrumento) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `tipo_instrumento` WHERE id=";
+        $sql = "DELETE FROM `TIPO_INSTRUMENTO` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($tipo_instrumento, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM `tipo_instrumento` WHERE id=$id";
+        $sql = "SELECT * FROM `TIPO_INSTRUMENTO` WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 

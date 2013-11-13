@@ -4,7 +4,7 @@ class TelefoneDAC {
 
     public static function persist($telefone) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `telefone` (`telefoneFixo`, `telefoneMovel`, 
+        $sql = "INSERT INTO `TELEFONE` (`telefoneFixo`, `telefoneMovel`, 
             `PESSOA_idPESSOA`, `PESSOA_INSTITUICAO_idINSTITUICAO` ) VALUES 
             ('" . $telefone->getTelefoneFixo() . "', 
                 '" . $telefone->getTelefoneMovel() . "',
@@ -21,19 +21,19 @@ class TelefoneDAC {
 
     public static function updateInfo(Telefone $telefone, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `telefone` SET `$atributo`=$atributoNovo WHERE id=" . $telefone->getId();
+        $sql = "UPDATE `TELEFONE` SET `$atributo`=$atributoNovo WHERE id=" . $telefone->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($telefone) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `telefone` WHERE id=";
+        $sql = "DELETE FROM `TELEFONE` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($telefone, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM `telefone` WHERE id=$id";
+        $sql = "SELECT * FROM `TELEFONE` WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 

@@ -4,7 +4,7 @@ class Instrumento_juridicoDAC {
 
     public static function persist($instrumento_juridico) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `instrumento_juridico` (`nome`, `dataInicio`, 
+        $sql = "INSERT INTO `INSTRUMENTO_JURIDICO` (`nome`, `dataInicio`, 
             `dataFim`, `valorContratoOriginal`, `informacoes`, 
             `INSTITUICAO_idINSTITUICAO`, TIPO_INSTRUMENTO_idTIPO_INSTRUMENTO, 
             `INSTITUICAO_CONTRATADA_idINSTITUICAO` ) VALUES 
@@ -27,19 +27,19 @@ class Instrumento_juridicoDAC {
 
     public static function updateInfo(Instrumento_juridico $instrumento_juridico, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `instrumento_juridico` SET `$atributo`=$atributoNovo WHERE id=" . $instrumento_juridico->getIdINSTUMENTO_JURIDICO();
+        $sql = "UPDATE `INSTRUMENTO_JURIDICO` SET `$atributo`=$atributoNovo WHERE id=" . $instrumento_juridico->getIdINSTUMENTO_JURIDICO();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($instrumento_juridico) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `instrumento_juridico` WHERE id=";
+        $sql = "DELETE FROM `INSTRUMENTO_JURIDICO` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($instrumento_juridico, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM instrumento_juridico WHERE id=$id";
+        $sql = "SELECT * FROM INSTRUMENTO_JURIDICO WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 

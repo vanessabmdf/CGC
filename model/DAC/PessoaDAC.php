@@ -4,7 +4,7 @@ class PessoaDAC {
 
     public static function persist($pessoa) {
         include_once './conexao.php';
-        $sql = "INSERT INTO `pessoa` (`nome`, `email`, `tipo`,  
+        $sql = "INSERT INTO `PESSOA` (`nome`, `email`, `tipo`,  
             `INSTITUICAO_idINSTITUICAO` ) VALUES 
             ('" . $pessoa->getNome() . "', 
                 '" . $pessoa->getEmail() . "',
@@ -21,19 +21,19 @@ class PessoaDAC {
 
     public static function updateInfo(Pessoa $pessoa, $atributo, $atributoNovo) {
         include_once 'conexao.php';
-        $sql = "UPDATE `pessoa` SET `$atributo`=$atributoNovo WHERE id=" . $pessoa->getId();
+        $sql = "UPDATE `PESSOA` SET `$atributo`=$atributoNovo WHERE id=" . $pessoa->getId();
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function delete($pessoa) {
         include_once 'conexao.php';
-        $sql = "DELETE FROM `pessoa` WHERE id=";
+        $sql = "DELETE FROM `PESSOA` WHERE id=";
         mysql_query($sql) or die(mysql_error());
     }
 
     public static function recupere($pessoa, $id) {
         include_once 'conexao.php';
-        $sql = "SELECT * FROM `pessoa` WHERE id=$id";
+        $sql = "SELECT * FROM `PESSOA` WHERE id=$id";
         $resultado = mysql_query($sql) or die(mysql_error());
         $row = mysql_fetch_array($resultado);
 
