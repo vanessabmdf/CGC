@@ -43,6 +43,10 @@ class Instituicao {
     public function recupereTudo() {
         return InstituicaoDAC::recupereTudo();
     }
+    
+    public function updateInfo() {
+        return InstituicaoDAC::updateInfo();
+    }
 
 }
 
