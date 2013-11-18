@@ -21,6 +21,44 @@
                                     <div class="item-page clearfix">
                                         <section class="container">
                                             <h3>Editar Institui&ccedil;&atilde;o</h3>
+                                            <?php
+                                            include_once '../model/DAC/conexao.php';
+                                            $_SESSION['id'] = $_GET["id"];
+                                            $id = $_GET["id"];
+                                            $result = mysql_query("SELECT * FROM INSTITUICAO WHERE idINSTITUICAO ='$id'");
+                                            while ($row = mysql_fetch_array($result)) {
+                                                $nome = $row['nome'];
+                                                $sigla = $row['sigla'];
+                                                $cnpj = $row['cnpj'];
+                                            }
+                                            ?>
+                                            <form class="form-horizontal" method="post" action="../controller/processaEditaInstituicao.php" enctype="multipart/form-data">
+                                                <div class="control-group">
+                                                    <label class="control-label" for="nome">Nome da Institui&ccedil;&atilde;o</label>
+                                                    <div class="controls">
+                                                        <input type="text" name="nome" placeholder="Nome" value="<?php echo $nome; ?>" required>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label" for="sigla">Sigla</label>
+                                                    <div class="controls">
+                                                        <input type="text" name="sigla" placeholder="Sigla"  value="<?php echo $sigla; ?>" required>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label" for="cnpj">CNPJ</label>
+                                                    <div class="controls">
+                                                        <input type="text" name="cnpj" placeholder="CNPJ"  value="<?php echo $cnpj; ?>" required>
+                                                    </div>
+
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <button type="submit" class="btn btn-success">Enviar</button>
+                                                        </div>
+                                                    </div>
+
+
+                                            </form>
 
                                         </section>
 

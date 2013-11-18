@@ -31,13 +31,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
-                                                        <label class="control-label" for="nome">Sigla</label>
+                                                        <label class="control-label" for="sigla">Sigla</label>
                                                         <div class="controls">
                                                             <input type="text" name="sigla" placeholder="Sigla" required>
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
-                                                        <label class="control-label" for="nome">CNPJ</label>
+                                                        <label class="control-label" for="cnpj">CNPJ</label>
                                                         <div class="controls">
                                                             <input type="text" name="cnpj" placeholder="CNPJ" required>
                                                         </div>

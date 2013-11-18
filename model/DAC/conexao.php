@@ -2,7 +2,6 @@
 
 $server = 'localhost';
 $db = 'contratosgigacandanga';
-//MODIFIQUE AQUI O USER.NAME E A SENHA DO SEU MYSQL
 $user = 'root';
 $password = '';
 

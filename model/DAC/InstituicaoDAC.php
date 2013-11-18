@@ -17,6 +17,16 @@ class InstituicaoDAC {
         return $mat['0'];
     }
 
+    public static function atualizar($instituicao) {
+        include_once 'conexao.php';
+        $sql = "UPDATE INSTITUICAO SET
+        nome='" . $instituicao->getNome() . "',
+        sigla='" . $instituicao->getSigla() . "',
+        cnpj='" . $instituicao->getCnpj() . "'
+        WHERE idINSTITUICAO='" . $instituicao->getId() . "'";
+        mysql_query($sql) or die(mysql_error());
+    }
+
     public static function updateInfo(Instituicao $instituicao, $atributo, $atributoNovo) {
         include_once 'conexao.php';
         $sql = "UPDATE `INSTITUICAO` SET `$atributo`=$atributoNovo WHERE id=" . $instituicao->getIdInstituicao();

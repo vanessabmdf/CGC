@@ -39,7 +39,7 @@
                                                 while ($sql = mysql_fetch_array($query)) {
                                                     $id = $sql["idINSTITUICAO"];
                                                     $nome = $sql["nome"];
-                                                    echo "$nome (ID = $id) <a href=gestao/editaInstituicao.php>Editar</a>";
+                                                    echo "$nome (ID = $id) <a href=gestao/editaInstituicao.php?id=$id>Editar</a>";
                                                     echo "</br>";
                                                 }
                                                 ?>
