@@ -23,7 +23,7 @@
                                         <section class="container">
                                             <h3>Nova Institui&ccedil;&atilde;o</h3>
                                             <div class="row">
-                                                <form class="form-horizontal" method="post" action="../controller/processaCadastroInstituicao.php" enctype="multipart/form-data">
+                                                <form class="form-horizontal" method="post" action="gestao/controller/processaCadastroInstituicao.php" enctype="multipart/form-data">
                                                     <div class="control-group">
                                                         <label class="control-label" for="nome">Nome da Institui&ccedil;&atilde;o</label>
                                                         <div class="controls">

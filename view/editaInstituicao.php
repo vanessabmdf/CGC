@@ -22,7 +22,7 @@
                                         <section class="container">
                                             <h3>Editar Institui&ccedil;&atilde;o</h3>
                                             <?php
-                                            include_once '../model/DAC/conexao.php';
+                                            include_once 'model/DAC/conexao.php';
                                             $_SESSION['id'] = $_GET["id"];
                                             $id = $_GET["id"];
                                             $result = mysql_query("SELECT * FROM INSTITUICAO WHERE idINSTITUICAO ='$id'");
@@ -32,7 +32,7 @@
                                                 $cnpj = $row['cnpj'];
                                             }
                                             ?>
-                                            <form class="form-horizontal" method="post" action="../controller/processaEditaInstituicao.php" enctype="multipart/form-data">
+                                            <form class="form-horizontal" method="post" action="gestao/controller/processaEditaInstituicao.php" enctype="multipart/form-data">
                                                 <div class="control-group">
                                                     <label class="control-label" for="nome">Nome da Institui&ccedil;&atilde;o</label>
                                                     <div class="controls">

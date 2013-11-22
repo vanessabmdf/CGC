@@ -19,7 +19,7 @@ class InstituicaoDAC {
 
     public static function atualizar($instituicao) {
         include_once 'conexao.php';
-        $sql = "UPDATE INSTITUICAO SET
+        $sql = "UPDATE `INSTITUICAO` SET
         nome='" . $instituicao->getNome() . "',
         sigla='" . $instituicao->getSigla() . "',
         cnpj='" . $instituicao->getCnpj() . "'
