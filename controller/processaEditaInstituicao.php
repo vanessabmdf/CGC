@@ -35,4 +35,5 @@ echo "Cadastro atualizado com sucesso!";
 echo "</br>";
 echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>";
 session_destroy();
+header("location: ../index.php");
 ?>

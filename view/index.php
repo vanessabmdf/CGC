@@ -31,9 +31,7 @@
                                                 </h3>
 
                                                 <?php
-                                                echo "ID mostrados apenas na fase de desenvolvimento.";
-                                                echo "</br>";
-                                                echo "Não é uma boa prática!";
+                                                echo "ID mostrados apenas na fase de desenvolvimento. Não é uma boa prática!";
                                                 echo "</br>";
                                                 echo "</br>";
                                                 //require_once('../controller/processaGestao.php') 

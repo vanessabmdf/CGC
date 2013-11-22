@@ -20,5 +20,6 @@ $instituicao->setCnpj($cnpj);
 $instituicao->persist();
 echo "Cadastro efetuado com sucesso!";
 echo "</br>";
-echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>"
+echo "<a href=http://www.gigacandanga.com.br/gestao>Voltar para p&aacutegina inicial</a>";
+header("location: ../index.php");
 ?>
