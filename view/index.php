@@ -31,6 +31,11 @@
                                                 </h3>
 
                                                 <?php
+                                                echo "ID mostrados apenas na fase de desenvolvimento.";
+                                                echo "</br>";
+                                                echo "Não é uma boa prática!";
+                                                echo "</br>";
+                                                echo "</br>";
                                                 //require_once('../controller/processaGestao.php') 
                                                 //selecionando dados da tabela
                                                 include_once 'model/DAC/conexao.php';
